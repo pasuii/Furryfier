@@ -1,6 +1,8 @@
 # Furryfier
 owo Makes your text weally cuuuuute!!!! =w=
 
+[![NuGet](https://img.shields.io/nuget/v/Furryfier.svg)](https://www.nuget.org/packages/Furryfier/)
+
 ## Usage
 ### Here is some default furryfier config usage
 
