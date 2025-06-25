@@ -4,7 +4,7 @@ Makes your text as UwU-OwO as possible. Use with caution, it can be contagious..
 [![NuGet](https://img.shields.io/nuget/v/Furryfier.svg)](https://www.nuget.org/packages/Furryfier/)
 
 ## Usage
-### Here is some default furryfier config usage
+### Hewe is some default furryfier config usage uwu
 
 ```cs
 using Furryfier;
@@ -27,14 +27,14 @@ internal abstract class Program
 }
 ```
 
-### Default config result
+### Default config result~~~
 ```txt
 Hey! My name is Ihaw. Rawr I like baskinball, pizza anyd funny cats! OWO
 ```
 
 <hr>
 
-### Here is some default furryfier config usage
+### Hewe is some default furryfier config usage owo
 
 ```cs
 using Furryfier;
@@ -77,7 +77,7 @@ internal abstract class Program
 }
 ```
 
-### Default config result
+### Custom config result ~~~
 ```txt
 *giggles* Hey! *boops* >w< My name 1s Ihar. *sniff* I l1ke bask1nball, p1zza and funny cats! *notices you* *blushes* UwU
 ```
