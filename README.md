@@ -1,5 +1,5 @@
 # Furryfier
-owo Makes your text weally cuuuuute!!!! =w=
+Makes your text as UwU-OwO as possible. Use with caution, it can be contagious... UwU
 
 [![NuGet](https://img.shields.io/nuget/v/Furryfier.svg)](https://www.nuget.org/packages/Furryfier/)
 
