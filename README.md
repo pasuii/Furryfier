@@ -1,10 +1,17 @@
-# Furryfier
-Makes your text as UwU-OwO as possible. Use with caution, it can be contagious... UwU
+# ✨ Furryfier
+
+Makes your text as **UwU-OwO** as possible.  
+Use with caution — it can be contagious... _UwU_
 
 [![NuGet](https://img.shields.io/nuget/v/Furryfier.svg)](https://www.nuget.org/packages/Furryfier/)
 
-## Usage
-### Default furryfier config usage uwu
+💡 Install via .NET CLI:
+```bash
+dotnet add package Furryfier --version <latest_version>
+```
+
+## 🚀 Usage
+### 🐾 Default furryfier config usage (uwu)
 
 ```cs
 using Furryfier;
@@ -26,15 +33,14 @@ internal abstract class Program
     }
 }
 ```
-
-### Result~~~
+### 📄 Example output:
 ```txt
 Hey! My name is Ihaw. Rawr I like baskinball, pizza anyd funny cats! OWO
 ```
 
 <hr>
 
-### Custom config usage owo
+### 🎛️ Custom config (owo)
 
 ```cs
 using Furryfier;
@@ -76,8 +82,21 @@ internal abstract class Program
     }
 }
 ```
-
-### Result ~~~
+### 📄 Example output:
 ```txt
 *giggles* Hey! *boops* >w< My name 1s Ihar. *sniff* I l1ke bask1nball, p1zza and funny cats! *notices you* *blushes* UwU
 ```
+
+<hr>
+
+## 🍺 Project Budget
+* A bottle of beer 🍼
+
+* Snacks 🍿
+
+* A free evening 🕒
+
+📦 Also, check out the TypeScript version of this library:
+👉 [GenAi-Bot/furryfier](https://github.com/GenAi-Bot/furryfier)
+
+    Made with ❤️ specially for GenAi
