@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <Version>1.0.0</Version>
+        <Authors>pasuii</Authors>
+        <PackageId>Furryfier</PackageId>
+        <Title>Furryfier</Title>
+        <Description>UwU-ifies your texts</Description>
+        <PackageTags>uwu;owo;furry;text;fun;funny</PackageTags>
+        <RepositoryUrl>https://github.com/pasuii/Furryfier</RepositoryUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    </PropertyGroup>
+
+</Project>
