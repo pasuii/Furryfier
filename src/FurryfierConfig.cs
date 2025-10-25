@@ -1,7 +1,14 @@
-﻿namespace Furryfier;
+﻿using Furryfier.Protection;
+
+namespace Furryfier;
 
 public class FurryfierConfig
 {
+    /// <summary>
+    /// Protection for sensitive data
+    /// </summary>
+    public ProtectedPatternsConfig ProtectedPatternsConfig { get; init; }
+    
     /// <summary>
     /// Chance, that the additional text will be added to the start of the text
     /// </summary>

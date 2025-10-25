@@ -19,7 +19,9 @@ public static partial class Furryfier
         
         var rnd = new Random();
 
-        var text = HandleText(input, rnd, config);
+        var result = TextProtector.ProtectText(input, config.ProtectedPatternsConfig);
+            
+        var text = HandleText(result.ProtectedText, rnd, config);
         
         text = HandleBetweenSentences(text, rnd, config);
 
@@ -28,7 +30,7 @@ public static partial class Furryfier
         builder.HandleStart(rnd, config);
         builder.HandleEnd(rnd, config);
         
-        return builder.ToString();
+        return TextProtector.RestoreProtectedText(builder.ToString(), result.ProtectedParts);
     }
     
     private static string HandleText(string input, Random rnd, FurryfierConfig config)
