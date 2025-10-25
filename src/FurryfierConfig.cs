@@ -1,8 +1,9 @@
-﻿using Furryfier.Protection;
+﻿using System.Text.RegularExpressions;
+using Furryfier.Protection;
 
 namespace Furryfier;
 
-public class FurryfierConfig
+public partial class FurryfierConfig
 {
     /// <summary>
     /// Protection for sensitive data
@@ -56,6 +57,12 @@ public class FurryfierConfig
     {
         Slang = DefaultSlang().ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
         LetterReplacements = DefaultReplacements().ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+        ProtectedPatternsConfig = new ProtectedPatternsConfig
+        {
+            ProtectedPatterns = ProtectedPatterns,
+            EnableDiscordMode = EnableDiscordMode,
+            DiscordProtectedPatterns = DiscordProtectedPatterns
+        };
     }
 
     /// <summary>
@@ -96,4 +103,25 @@ public class FurryfierConfig
         ['р'] = ("в", 20), ['Р'] = ("В", 20),
         ['л'] = ("в", 20), ['Л'] = ("В", 20)
     };
+    
+    /// <summary>
+    /// Default protected patterns
+    /// </summary>
+    private static readonly Regex[] ProtectedPatterns = [ProtectedPatternsRegex()];
+    
+    /// <summary>
+    /// Default discord mode value
+    /// </summary>
+    private const bool EnableDiscordMode = true;
+    
+    /// <summary>
+    /// Default discord protected patterns
+    /// </summary>
+    private static readonly Regex[] DiscordProtectedPatterns = [DiscordProtectedPatternsRegex()];
+
+    [GeneratedRegex(@"https?://\S+", RegexOptions.Compiled)]
+    private static partial Regex ProtectedPatternsRegex();
+    
+    [GeneratedRegex("<[^>]*>", RegexOptions.Compiled)]
+    private static partial Regex DiscordProtectedPatternsRegex();
 }

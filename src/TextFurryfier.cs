@@ -1,11 +1,13 @@
 ﻿using System.Text;
+using System.Text.RegularExpressions;
+using Furryfier.Protection;
 
 namespace Furryfier;
 
-public static partial class Furryfier
+public static partial class TextFurryfier
 {
-    [System.Text.RegularExpressions.GeneratedRegex("(?<=[.!?])")]
-    private static partial System.Text.RegularExpressions.Regex SentenceRegex();
+    [GeneratedRegex("(?<=[.!?])")]
+    private static partial Regex SentenceRegex();
     
     /// <summary>
     /// Method for furryfying text
@@ -19,7 +21,7 @@ public static partial class Furryfier
         
         var rnd = new Random();
 
-        var result = TextProtector.ProtectText(input, config.ProtectedPatternsConfig);
+        var result = input.ProtectText(config.ProtectedPatternsConfig);
             
         var text = HandleText(result.ProtectedText, rnd, config);
         
@@ -30,7 +32,7 @@ public static partial class Furryfier
         builder.HandleStart(rnd, config);
         builder.HandleEnd(rnd, config);
         
-        return TextProtector.RestoreProtectedText(builder.ToString(), result.ProtectedParts);
+        return builder.ToString().RestoreProtectedText(result.ProtectedParts);
     }
     
     private static string HandleText(string input, Random rnd, FurryfierConfig config)
